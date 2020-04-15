@@ -19,7 +19,7 @@ Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..
 In order to use this library, a __React__ version **>=16.8.0** is required which introduce __React Hooks__ ⚛️⚡ .. 
 
 
-### Installation 
+### `Installation` 
 
 ```bash
 # npm ..
@@ -29,12 +29,12 @@ $ yarn add use-lifecycle-hooks
 ```
 
 
-### API
+### `API`
 
   - [`useComponentWillMount`][use-component-will-mount-docs-url] &mdash; same with ComponentWillMount.
   - [`useComponentDidMount`][use-component-did-mount-docs-url] &mdash; same with componentDidMount.
-  - [`useComponentDidUpdate`][use-component-did-update-docs-url] &mdash; same with componentDidUpdate.
-  - [`useShouldComponentUpdate`][use-should-component-update-docs-url] &mdash; same with shouldComponentUpdate.
+  - [`useComponentDidUpdate`][use-component-did-update-docs-url] &mdash; same with componentDidUpdate (pure componentDidUpdate).
+  - [`useShouldComponentUpdate`][use-should-component-update-docs-url] &mdash; same with shouldComponentUpdate (and componentDidUpdate with comparison).
   - [`useComponentWillUnmount`][use-component-will-unmount-docs-url] &mdash; same with componentWillUnmount. 
 
 > __Every lifecycle hook can be used more than one time in the same function, observing the hook rules📏.__
@@ -47,9 +47,9 @@ $ yarn add use-lifecycle-hooks
 | `deps`      | Array     | all props/states values that change them lead to re-rendering.  | only in useShuseShouldComponentUpdate.    |
 
 
-### Usage 
+### `Usage`
 
-This is a practical example of how to use. For more, you can review the [examples][examples-url] or [docs][docs-url] dir.
+This is a practical example of how to use. For more, you can review the [docs][docs-url] dir.
 
 ```jsx
 import React from 'react';
@@ -111,7 +111,6 @@ function yourComponent () { // <yourComponent />
 [pr-url]: https://github.com/3imed-jaberi/use-lifecycle-hooks/blob/master/CONTRIBUTING.md
 
 
-[examples-url]: https://github.com/3imed-jaberi/use-lifecycle-hooks/tree/master/examples
 
 [docs-url]: https://github.com/3imed-jaberi/use-lifecycle-hooks/tree/master/docs
 

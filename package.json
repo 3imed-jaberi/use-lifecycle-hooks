@@ -1,8 +1,8 @@
 {
   "name": "use-lifecycle-hooks",
-  "version": "0.1.0",
+  "version": "1.0.0-beta",
   "private": true,
-  "description": "",
+  "description": "Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..",
   "main": "build/index.js",
   "files": [
     "build",
@@ -10,14 +10,25 @@
   ],
   "scripts": {
     "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "npm run lint --fix",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "cover": "jest --coverage",
     "build": "rollup -c",
-    "ci": "npm run lint && npm run build && npm run cover"
+    "ci": "npm run lint && npm run build && npm run cover",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm run ci",
+    "preversion": "npm run ci"
   },
   "keywords": [
-    "react"
+    "react",
+    "reactjs",
+    "react native",
+    "react hooks",
+    "lifecycle hooks",
+    "useEffect",
+    "componentDidMount",
+    "useComponentDidMount"
   ],
   "author": {
     "name": "imed jaberi",

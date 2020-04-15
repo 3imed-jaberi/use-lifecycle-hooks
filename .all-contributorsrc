@@ -6,23 +6,7 @@
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": false,
   "commit": false,
-  "contributors": [
-    {
-      "login": "3imed-jaberi",
-      "name": "Imed Jaberi",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/43971542?&v=4",
-      "profile": "https://www.3imed-jaberi.com",
-      "contributions": [
-        "code",
-        "test",
-        "example",
-        "maintenance",
-        "infra",
-        "blog",
-        "doc"
-      ]
-    }
-  ],
+  "contributors": [],
   "contributorsPerLine": 7,
   "projectName": "use-lifecycle-hooks",
   "projectOwner": "3imed-jaberi",

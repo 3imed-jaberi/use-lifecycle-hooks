@@ -1,0 +1,5 @@
+{
+  "setupFilesAfterEnv": [
+    "<rootDir>/test/index.spec.js"
+  ]
+}

@@ -12,7 +12,9 @@
     "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "build": "rollup -c"
+    "cover": "jest --coverage",
+    "build": "rollup -c",
+    "ci": "npm run lint && npm run build && npm run cover"
   },
   "keywords": [
     "react"

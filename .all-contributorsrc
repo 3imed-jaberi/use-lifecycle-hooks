@@ -6,10 +6,26 @@
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": false,
   "commit": false,
-  "contributors": [],
-  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "3imed-jaberi",
+      "name": "imed jaberi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43971542?v=4",
+      "profile": "https://3imed-jaberi.com",
+      "contributions": [
+        "code",
+        "test",
+        "example",
+        "maintenance",
+        "infra",
+        "blog",
+        "doc"
+      ]
+    }
+  ],
   "projectName": "use-lifecycle-hooks",
   "projectOwner": "3imed-jaberi",
   "repoType": "github",
-  "repoHost": "https://github.com"
+  "repoHost": "https://github.com",
+  "skipCi": true
 }

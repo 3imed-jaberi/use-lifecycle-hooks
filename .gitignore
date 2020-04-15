@@ -1,1 +1,34 @@
-# init 🚧 .. 
+
+#       OS        #
+###################
+.DS_Store
+.idea
+Thumbs.db
+tmp/
+temp/
+
+
+#     Node.js     #
+###################
+node_modules
+package-lock.json
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+
+#       Misc      #
+###################
+*.env.*
+
+
+#       NYC       #
+###################
+coverage
+*.lcov
+.nyc_output
+
+
+#      Others     #
+###################
+build/

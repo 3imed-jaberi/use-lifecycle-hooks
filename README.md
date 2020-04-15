@@ -10,7 +10,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/3imed-jaberi/use-lifecycle-hooks/blob/master/CONTRIBUTING.md) &nbsp;&nbsp;
 
 
-### A collection of hooks that helps you to track the lifecycle of your components in a similar way to class components.
+## Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..
 
 
 ### `Prerequisites` ⚠️:

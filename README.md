@@ -1,6 +1,7 @@
 # use-lifecycle-hooks 
 ---
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![Build Status][travis-badge]][travis-url] &nbsp;&nbsp;
 [![Coverage Status][coveralls-badge]][coveralls-url] &nbsp;&nbsp;
 [![NPM version][npm-badge]][npm-url] &nbsp;&nbsp;
@@ -78,7 +79,8 @@ function yourComponent () { // <yourComponent />
 
 
 
-##  
+
+
 
 [travis-badge]: https://travis-ci.org/3imed-jaberi/use-lifecycle-hooks.svg?branch=master
 

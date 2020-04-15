@@ -1,1 +1,29 @@
-// init 🚧 .. 
+{
+  "name": "use-lifecycle-hooks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "main": "build/index.js",
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": {
+    "name": "imed jaberi",
+    "url": "https://www.3imed-jaberi.com/",
+    "email": "3imed.jaberi@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  },
+  "engines": {
+    "node": ">= 8"
+  }
+}

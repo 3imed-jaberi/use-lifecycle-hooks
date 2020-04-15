@@ -1,7 +1,6 @@
 {
   "name": "use-lifecycle-hooks",
-  "version": "1.0.0-beta",
-  "private": true,
+  "version": "1.0.0-rc",
   "description": "Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..",
   "main": "build/index.js",
   "files": [
@@ -13,12 +12,16 @@
     "lint:fix": "npm run lint --fix",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "cover": "jest --coverage",
+    "coverage": "jest --coverage",
     "build": "rollup -c",
-    "ci": "npm run lint && npm run build && npm run cover",
+    "ci": "npm run lint:fix && npm run build && npm run coverage",
     "postversion": "git push && git push --tags",
     "prepublishOnly": "npm run ci",
     "preversion": "npm run ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3imed-jaberi/use-lifecycle-hooks"
   },
   "keywords": [
     "react",
@@ -74,5 +77,9 @@
   },
   "engines": {
     "node": ">= 8"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/3imed-jaberi/use-lifecycle-hooks/issues"
+  },
+  "homepage": "https://github.com/3imed-jaberi/use-lifecycle-hooks#readme"
 }

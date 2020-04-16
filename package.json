@@ -1,6 +1,6 @@
 {
   "name": "use-lifecycle-hooks",
-  "version": "1.0.0-rc",
+  "version": "1.0.0",
   "description": "Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..",
   "main": "build/index.js",
   "files": [
@@ -14,7 +14,7 @@
     "test:watch": "jest --watchAll",
     "coverage": "jest --coverage",
     "build": "rollup -c",
-    "ci": "npm run lint:fix && npm run build && npm run coverage",
+    "ci": "npm run lint && npm run build && npm run coverage",
     "postversion": "git push && git push --tags",
     "prepublishOnly": "npm run ci",
     "preversion": "npm run ci"
@@ -31,7 +31,15 @@
     "lifecycle hooks",
     "useEffect",
     "componentDidMount",
-    "useComponentDidMount"
+    "useComponentDidMount",
+    "componentDidUpdate",
+    "useComponentDidUpdate",
+    "componentWillMount",
+    "useComponentWillMount",
+    "componentWillUnmount",
+    "useComponentWillUnmount",
+    "shouldComponentUpdate",
+    "useShouldComponentUpdate"
   ],
   "author": {
     "name": "imed jaberi",

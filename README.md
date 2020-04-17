@@ -14,6 +14,9 @@
 Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..
 
 
+> Thinking in lifecycles terms in hooks is a bad practice. You can follow this [article][use-effect-guide-dan-abramov-url] for a useEffect guide and how it's bad to mix think.
+
+
 ### `Prerequisites` ⚠️:
 
 In order to use this library, a __React__ version **>=16.8.0** is required which introduce __React Hooks__ ⚛️⚡ .. 
@@ -111,6 +114,8 @@ function yourComponent () { // <yourComponent />
 [pr-url]: https://github.com/3imed-jaberi/use-lifecycle-hooks/blob/master/CONTRIBUTING.md
 
 
+
+[use-effect-guide-dan-abramov-url]: https://overreacted.io/a-complete-guide-to-useeffect
 
 [docs-url]: https://github.com/3imed-jaberi/use-lifecycle-hooks/tree/master/docs
 

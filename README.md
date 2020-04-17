@@ -14,7 +14,8 @@
 Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..
 
 
-> Thinking in lifecycles terms in hooks is a bad practice. You can follow this [article][use-effect-guide-dan-abramov-url] for a useEffect guide and how it's bad to mix think.
+> Thinking in lifecycles terms in hooks is a bad practice.
+> You can follow this [article][use-effect-guide-dan-abramov-url] for a useEffect guide and how it's bad to mix think.
 
 
 ### `Prerequisites` ⚠️:

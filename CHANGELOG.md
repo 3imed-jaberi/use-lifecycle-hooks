@@ -1,6 +1,6 @@
 ## CHANGE LOG
 
-### v1.0.1 (17 Avr 2020)
+### v1.0.1 (18 Avr 2020)
 - add README.md file to docs dir for better presentation.
 - add Note to root README.md (Thinking in lifecycles terms in hooks is a bad practice).
 - fix typo inside README.md.

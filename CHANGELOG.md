@@ -1,5 +1,10 @@
 ## CHANGE LOG
 
+### v1.0.1 (17 Avr 2020)
+- add README.md file to docs dir for better presentation.
+- add Note to root README.md (Thinking in lifecycles terms in hooks is a bad practice).
+- fix typo inside README.md.
+
 ### v1.0.0 (16 Avr 2020)
 - add docs with a basic example and comparison with useEffect.
 - update README.md with links to docs dir.

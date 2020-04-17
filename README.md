@@ -34,7 +34,7 @@ $ yarn add use-lifecycle-hooks
 
 ### `API`
 
-  - [`useComponentWillMount`][use-component-will-mount-docs-url] &mdash; same with ComponentWillMount.
+  - [`useComponentWillMount`][use-component-will-mount-docs-url] &mdash; same with componentWillMount.
   - [`useComponentDidMount`][use-component-did-mount-docs-url] &mdash; same with componentDidMount.
   - [`useComponentDidUpdate`][use-component-did-update-docs-url] &mdash; same with componentDidUpdate (pure componentDidUpdate).
   - [`useShouldComponentUpdate`][use-should-component-update-docs-url] &mdash; same with shouldComponentUpdate (and componentDidUpdate with comparison).

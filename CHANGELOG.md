@@ -1,9 +1,11 @@
 ## CHANGE LOG
 
+### v1.0.1 (19 Avr 2020)
+- fix COC link inside README.md.
+
 ### v1.0.1 (18 Avr 2020)
 - add README.md file to docs dir for better presentation.
 - add Note to root README.md (Thinking in lifecycles terms in hooks is a bad practice).
-- fix typo inside README.md.
 
 ### v1.0.0 (16 Avr 2020)
 - add docs with a basic example and comparison with useEffect.

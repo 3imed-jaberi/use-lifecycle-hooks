@@ -107,7 +107,7 @@ function yourComponent () { // <yourComponent />
 
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 
-[coc-url]: https://github.com/kentcdodds/advanced-react-patterns-v2/blob/master/CODE_OF_CONDUCT.md
+[coc-url]: https://github.com/3imed-jaberi/use-lifecycle-hooks/blob/master/CODE_OF_CONDUCT.md
 
 [pr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 

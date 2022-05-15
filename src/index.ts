@@ -1,4 +1,6 @@
-import { useEffect } from 'react';
+// eslint-disable-next-line prettier/prettier
+import type { FC, EffectCallback, DependencyList } from 'react';
+import { memo, useEffect, useRef } from 'react';
 
 // #######################################################################
 // ################################ Notes ################################
@@ -18,8 +20,9 @@ import { useEffect } from 'react';
 // ################################ Types ################################
 // #######################################################################
 
-type CallbackFunc = () => void | undefined;
-type DependencyList = ReadonlyArray<unknown>; // eslint-disable-line no-undef
+// eslint-disable-next-line no-undef
+type Props = Record<string, unknown>
+type ShouldComponentUpdateHandler = (props: Props, nextProps: Props) => boolean;
 
 // #######################################################################
 // ################################ Code #################################
@@ -30,41 +33,68 @@ type DependencyList = ReadonlyArray<unknown>; // eslint-disable-line no-undef
  * Avoid introducing any side-effects or subscriptions in this method.
  * Please, see our docs dir for this hook. Be Careful.
  *
- * @param func callback function only allowed to return void.
+ * @param handler callback function only allowed to return void.
  */
-function useComponentWillMount(func: CallbackFunc): void {
-  func();
+function useComponentWillMount(handler: EffectCallback): void {
+  const willMount = useRef<boolean>(true)
+  if (willMount.current) handler();
+  willMount.current = false;
 }
 
 /**
  * Called immediately after a component is mounted.
  * Setting state here will trigger re-rendering.
  *
- * @param func callback function only allowed to return void.
+ * @param handler callback function only allowed to return void.
  */
-function useComponentDidMount(func: CallbackFunc): void {
-  useEffect(func, []);
+function useComponentDidMount(handler: EffectCallback): void {
+  useEffect(handler, []);
 }
 
 /**
  * Called immediately after updating occurs.
  * Note : Called for the initial render.
  *
- * @param func callback function only allowed to return void.
+ * @param handler callback function only allowed to return void.
  */
-function useComponentDidUpdate(func: CallbackFunc): void {
-  useEffect(func);
+function useComponentDidUpdate(handler: EffectCallback, deps?: DependencyList): void {
+  const hasMounted = useRef<boolean>(false)
+
+  useEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      return;
+    }
+
+    handler();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
 }
 
 /**
- * Called immediately after change in deps occurs.
- * Should trigger a re-render.
+ * Behave like shouldComponentUpdate but with diffrent params.
  *
- * @param func callback function only allowed to return void.
- * @param deps all props/states values  that change them lead to re-rendering.
+ * @param Component component want to inject with the shouldComponentUpdate lifecycle.
+ * @param shouldComponentUpdateHandler comparator like the shouldComponentUpdate lifecycle.
+ * @returns [PureComponent]
  */
-function useShouldComponentUpdate(func: CallbackFunc, deps: DependencyList): void {
-  useEffect(func, [deps]);
+function useShouldComponentUpdate(Component: FC, shouldComponentUpdateHandler?: ShouldComponentUpdateHandler) {
+  return [memo(Component, shouldComponentUpdateHandler)];
+}
+
+/**
+ * @alias useShouldComponentUpdate
+ */
+function usePureComponent(Component: FC, shouldComponentUpdateHandler?: ShouldComponentUpdateHandler) {
+  return [memo(Component, shouldComponentUpdateHandler)];
+}
+
+/**
+ * @alias useShouldComponentUpdate but with diffrent pattern (HOC)!
+ */
+function withShouldComponentUpdate(Component: FC) {
+  return (shouldComponentUpdateHandler: ShouldComponentUpdateHandler) =>
+    memo(Component, shouldComponentUpdateHandler)
 }
 
 /**
@@ -73,14 +103,10 @@ function useShouldComponentUpdate(func: CallbackFunc, deps: DependencyList): voi
  * as cancelled network requests, or cleaning up any
  * DOM elements created in `useComponentDidMount`.
  *
- * @param func callback function only allowed to return void.
+ * @param handler callback function only allowed to return void.
  */
-function useComponentWillUnmount(func: CallbackFunc): void {
-  useEffect(() => {
-    return () => {
-      func();
-    };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+function useComponentWillUnmount(handler: () => void): void {
+  useEffect(() => () => handler(), []); // eslint-disable-line react-hooks/exhaustive-deps
 }
 
 // ########################################################################
@@ -91,6 +117,8 @@ export {
   useComponentWillMount,
   useComponentDidMount,
   useComponentDidUpdate,
+  useComponentWillUnmount,
+  usePureComponent,
   useShouldComponentUpdate,
-  useComponentWillUnmount
+  withShouldComponentUpdate
 };

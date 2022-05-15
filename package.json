@@ -1,6 +1,6 @@
 {
   "name": "use-lifecycle-hooks",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Use a class-based lifecycle ⚡ under the React Hooks ⚛️🚀 ..",
   "main": "build/index.js",
   "files": [
@@ -40,12 +40,17 @@
     "componentWillUnmount",
     "useComponentWillUnmount",
     "shouldComponentUpdate",
-    "useShouldComponentUpdate"
+    "useShouldComponentUpdate",
+    "withShouldComponentUpdate",
+    "PureComponent",
+    "usePureComponent",
+    "memo",
+    "useRef"
   ],
   "author": {
     "name": "imed jaberi",
     "url": "https://www.3imed-jaberi.com/",
-    "email": "3imed.jaberi@gmail.com"
+    "email": "imed-jaberi@outlook.com"
   },
   "license": "MIT",
   "peerDependencies": {
